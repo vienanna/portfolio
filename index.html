@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Chilanka|Niramit|Quicksand&display=swap" rel="stylesheet">
+    <meta name="description" content="Se den udadvendte og positive multimediedesigners - Anna Vien - portfolio.">
+    <title>Anna Viens portfolio</title>
+</head>
+
+<body>
+    <header>
+        <!-- Med inspiration fra Michelle -->
+        <section id="logo-burger">
+            <a id="logo" href="index.html"><img src="images/logo.png" alt="logo"></a>
+            <label for="toggle">&#9776;</label>
+        </section>
+        <nav>
+            <input type="checkbox" id="toggle" class="hidden">
+            <ul id="main-nav">
+                <li><a href=#oversigt>Det har jeg lavet</a></li>
+                <li><a href="om-mig.html">Om mig</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="billedeforside">
+        <h1>Hej mit navn er Anna Vien<br><br>Den udadvendte, positive og
+            <!-- code by Gregory Schier -->
+            <span class="txt-rotate" data-period="2000" data-rotate='[ "nørdet", "sjove" ]'></span> multimediedesigner
+        </h1>
+        <!-- icon af Dave Gandy -->
+        <div><a href="#oversigt"><img src="images/down-arrow.png" alt="ikon af pil der pejer nedad"></a></div>
+    </section>
+
+    <main>
+
+        <section id="oversigt">
+
+            <h2>Det har jeg lavet</h2>
+
+            <!-- Med inspiration fra Envato Tutsplus -->
+            <section class="grid-container">
+
+
+                <section id="sketches" class="location-listing">
+
+                    <a class="location-title" href="skitser.html" id="oversigts-hover">
+                        Skitser</a>
+
+                    <div class="location-image">
+                        <a href="skitser.html">
+                            <img src="images/lucy.jpg" alt="" class="billedeoversigt"> </a>
+
+                    </div>
+
+                </section>
+
+
+                <section id="posters" class="location-listing">
+                    <a class="location-title" href="plakater.html" id="oversigts-hover2">Plakater </a>
+
+                    <div class="location-image">
+                        <a href="#">
+                            <img src="images/batichu.jpg" alt="" class="billedeoversigt"> </a>
+
+                    </div>
+                </section>
+
+
+
+                <section id="projects" class="location-listing">
+
+                    <a class="location-title" href="projekter.html" id="oversigts-hover5">
+                        Projekter</a>
+
+                    <div class="location-image">
+                        <a href="projekter.html">
+                            <img src="images/wireframes.jpg" alt="" class="billedeoversigt"> </a>
+
+                    </div>
+
+                </section>
+
+
+
+                <section id="illustrationer" class="location-listing">
+
+                    <a class="location-title" href="illustrationer.html" id="oversigts-hover4">
+                        Illustrationer</a>
+
+                    <div class="location-image">
+                        <a href="projekter.html">
+                            <img src="images/koi.jpg" alt="" class="billedeoversigt"> </a>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+
+        </section>
+
+
+
+    </main>
+
+    <footer id="forside-footer">
+        <img src="images/logo-white.png" alt="logo">
+        <p>&#169; By Anna Vien</p>
+    </footer>
+
+    <!-- script by Gregory Schier -->
+    <script>
+        var TxtRotate = function(el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtRotate.prototype.tick = function() {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 300 - Math.random() * 100;
+
+            if (this.isDeleting) {
+                delta /= 2;
+            }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function() {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function() {
+            var elements = document.getElementsByClassName('txt-rotate');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-rotate');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtRotate(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+            document.body.appendChild(css);
+        };
+
+    </script>
+
+</body>
+
+</html>

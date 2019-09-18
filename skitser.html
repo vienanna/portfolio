@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Chilanka|Niramit|Quicksand&display=swap" rel="stylesheet">
+    <meta name="description" content="Se fine skitser, tegnet af Anna Vien">
+    <title>Anna Viens skitser</title>
+</head>
+
+<body>
+    <header>
+        <!-- Med inspiration fra Michelle -->
+        <section id="logo-burger">
+            <a id="logo" href="index.html"><img src="images/logo.png" alt="logo"></a>
+            <label for="toggle">&#9776;</label>
+        </section>
+        <nav>
+            <input type="checkbox" id="toggle" class="hidden">
+            <ul id="main-nav">
+                <li><a href=index.html#oversigt>Det har jeg lavet</a></li>
+                <li><a href="om-mig.html">Om mig</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+    <div>
+        <ul class="breadcrumb">
+            <li><a href="index.html#oversigt">Det har jeg lavet</a></li>
+            <li><a href="#">Skitser</a></li>
+        </ul>
+    </div>
+    
+<main>
+   <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="arrow up"></i></button>
+   
+    <div id="skitser">
+     
+       <div id="lucy">
+       <p>Lucy</p>
+        <img src="images/lucy-with-border.jpg" alt="skitse af en anime pige">
+    <div class="overlay" id="lucy-overlay">
+    <div class="text">Som udgangpunkt blev denne skitse,<br> skitseret i forbindelse med,<br>at blive bedre til at tegne krøller.<br>Lucys outfit er med inspiration<br>fra det klassiske eventyr, Askepot.   
+</div>
+  </div>
+</div>
+        
+        <div id="lluvia">
+        <p>Juvia</p>
+        <img src="images/lluvia.jpg" alt="skitse af en pige der står i regnen">
+            <div class="overlay" id="juvia-overlay">
+    <div class="text">Denne skitse har inspiration fra den<br>subkulturelle tøjstil, Lolita, fra Japan samt<br>efter Juvia Lockser, fra den populære<br>anime-serie, Fairy Tail.<br>Juvias navn er oprindelig spansk (Lluvia),<br>som betyder regn. 
+</div>
+  </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        <div id="miss-fortune">
+        <p>Cowgirl Miss Fortune</p>
+        <img src="images/miss-fortune.jpg" alt="skitse af en cowgirl">
+            <div class="overlay" id="mf-overlay">
+    <div class="text">Miss Fortune en champion fra det meget<br>populære computerspil, League of Legends.<br>Hun er oprindelig en pirat.<br>I spillet kan man købe visse "skins", til<br>disse champions. Skinsne refererer til et<br>alternetivt udseende.
+    <br>Skitsen hér er et skin, som er inspireret <br>af hende og den vilde vesten.  
+</div>
+  </div>
+        </div>
+        
+        
+        
+        <div id="ashe">
+        <p>Ashe</p>
+        <img src="images/ashe.jpg" alt="skitse af en pige med bue og pil">
+                 
+        <div class="overlay" id="ashe-overlay">
+    <div class="text">Denne skitse er inspireret af Ashe,<br>som også er fra det meget populære<br>computerspil, League of Legends.<br>Ashe er en bueskytte, hvis pile er af is.    
+</div>
+  </div>
+        </div>
+        
+        
+        
+        
+        
+        <div id="janna">
+        <p>Janna</p>
+        <img src="images/janna.jpg" alt="skitse af en pige med tryllestav">
+           <div class="overlay" id="janna-overlay">
+    <div class="text">Denne skitse er inspireret af Janna,<br>som også er fra det meget populære<br>computerspil, League og Legends.<br>Janna er en mystisk ånd, som kan <br>kontroller vind. 
+</div>
+  </div>
+        </div>
+        
+        
+        
+        
+        <div id="pikaball">
+        <p>Chu?</p>
+        <img src="images/pikachu.jpg" alt="skitse af pikachu på en pokeball">
+             <div class="overlay" id="pika-overlay">
+    <div class="text">Denne skitse er af Pikachu på en pokéball<br>fra den verdens berømte tegnefilmsserie,<br>Pokémon. 
+</div>
+  </div>
+    </div>
+    
+    
+    
+    
+    
+    <div id="orianna">
+        <p>Ballerina Orianna</p>
+        <img src="images/orianna.jpg" alt="skitse af robotpige">
+              <div class="overlay" id="orianna-overlay">
+    <div class="text">Denne skitse er inspireret af Orianna,<br>som også er fra det meget populære<br>computerspil, League og Legends.<br>Oriannas krop er et teknologisk vidunder,<br>bestående udelukkende af urværk.<br>Skitsen hér er Orianna med et skin,<br>som en ballerina danser. 
+</div>
+  </div>
+        
+    </div>
+    
+    
+    <div id="cupcake">
+        <p>Cupcake of Love</p>
+        <img src="images/cupcake.jpg" alt="cupkace med hjertepynt">
+                  <div class="overlay" id="cake-overlay">
+    <div class="text">Denne skitse blev skitseret i forbindelse til,<br>en trang til søde sager. Da jeg har en stor<br>forkærlighed på sweets, så skulle cupcaken<br>have en fin knap med "love" på. 
+</div>
+  </div>
+    </div>
+    
+    
+    </div>
+    
+</main>
+    
+    <footer id="skitser-footer">
+   <img src="images/logo-white.png" alt="logo">
+    <p>&#169; By Anna Vien</p>
+</footer>
+   
+<!-- script source: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->    
+      
+<script>
+
+var mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
+</script>
+    
+    </body>
+</html>
